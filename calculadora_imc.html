@@ -1,0 +1,89 @@
+<meta charset="UTF-8">
+
+<center>
+<body>
+    
+        <h1>CALCULADOR IMC </h1>
+  
+
+
+
+<script>
+
+    function saltoLinea(){
+        document.write("<hr>");
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<hr>");
+    }
+    function imprimir (frase){
+        document.write(frase);
+        saltoLinea();
+    }
+    //calcualr imc manual 
+    function calcualrImc(peso,altura){
+        imc1 = peso / (altura * altura);
+        return(imc1);
+    }
+    //calcular imc automatico
+    function calculaIMC(peso,altura,nombre){
+        imc2 = peso / (altura * altura);
+        imprimir("El imc calculado de: " + nombre + " es: " + imc2);
+    
+   }
+   //calcular imc de manera multiple
+   function CalcuImc(peso,altura,nombre,peso1,altura1,nombre1){
+        imc3 = peso / (altura * altura);
+        imc4 = peso1 / (altura1 * altura1);
+        imprimir("El imc de: " + nombre + "es: " + imc3 + "<br><hr><br>"+ "<hr>"+" El imc de " + nombre1 + " es: " + imc4);
+        return
+
+   }
+   //una funcion especifica para poder reutilizarla 
+   function imccalcu(peso,altura){
+    return (peso / (altura * altura));
+
+}
+
+
+pesoErick = 81;
+alturaErick = 1.82;
+imcErick = pesoErick / (alturaErick * alturaErick);
+imprimir("El imc de Erick es: " + imcErick)
+
+pesoDaniel = 71;
+alturaDaniel = 1.72;
+imcDaniel = pesoDaniel / (alturaDaniel * alturaDaniel);
+imprimir("El imc de Daniel es: "  + imcDaniel)
+
+//aqui hacemos que el codigo sea mas eficiente //
+
+pesoFabri = 82;
+alturaFabri = 1.80;
+imcFabri = calcualrImc(pesoFabri,alturaFabri);
+imprimir("El imc de Fabri es: " + imcFabri)
+
+//aqui logramos hacer que el codigo aun sea mas eficiente//
+
+
+imcKike = calcualrImc(90,1.70);
+imprimir("El imc de Kike es: " + imcKike)
+
+// y aqui se simplifico aun mas
+
+calculaIMC(71,1.50,"juan");
+calculaIMC(60,1.60,"amilcar");
+calculaIMC(100,1.70,"sancho");
+
+//manera de hacerlo de formas multiple 
+
+CalcuImc(78,1.50,"Lili",84,1.45,"karla");
+
+
+//sacar imc promedio y se divide en el total de imc 
+imprimir("El promedio de imc calcualdor de Adri y Felipe es: " + (imccalcu(72,1.55)+(imccalcu(54,1.60))/2))
+
+</script>
+
+</body>
+</center>

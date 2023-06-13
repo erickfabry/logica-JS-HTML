@@ -1,0 +1,30 @@
+<meta charset="UTF-8">
+
+<center><body>
+    <h1>CALCULAR CADA ANHO DEL MUNDIAL</h1>
+    <script>
+
+            function saltarlinea(){
+                document.write("<br>");
+                document.write("<br>");
+                document.write("<br>");
+            }
+            function imprimir(frase){
+                document.write(frase);
+                saltarlinea();
+            }
+            
+            
+            var anhomundial = 1930;
+            var limite = parseInt(prompt("Ingrese hasta que anho quiere calcular"));
+
+             while ( anhomundial <= limite ){
+                imprimir("Hubo un mundial FIFA en " + anhomundial);
+                anhomundial = anhomundial + 4;
+                
+             }
+             imprimir("FIN")
+           
+
+    </script>
+</body></center>

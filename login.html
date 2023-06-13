@@ -1,0 +1,34 @@
+<meta charset="UTF-8">
+<script>
+    function saltarlinea(){
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<br>");
+    }
+    function imprimir(frase){
+        document.write(frase);
+        saltarlinea();
+    }
+
+            var inicioDeSesionRegistrado = "alura";
+            var contrasenhaRegistrada = "alura321";
+
+            var intentos = 1;
+            var contador = 3;
+
+            while ( intentos <= contador){
+                var inicioDeSesionIngresado = prompt("Ingrese su usuario");
+                var contrasenhaIngresada = prompt("Ingrese su contraseña");
+                if(inicioDeSesionRegistrado == inicioDeSesionIngresado && contrasenhaRegistrada == contrasenhaIngresada){
+                    alert("BIENVENIDO AL SISTEMA")
+                    break;
+                }
+                else{
+                    alert("INGRESE SUS DATOS CORRECTOS. INTENTOS DISPONIBLES: " + contador);
+                    alert("INTRUSO EN EL SISTEMA")
+                    
+                }
+                contador--;
+            }
+            
+</script>

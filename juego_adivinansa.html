@@ -1,0 +1,40 @@
+<meta charset="UTF-8">
+
+
+    <center><body>
+        <h1>GRACIAS POR PARTICIPAR</h1>
+        <script>
+            
+                function saltarlinea(){
+                    document.write("<br>");
+                    document.write("<br>");
+                    document.write("<br>");
+                }
+                function imprimir(frase){
+                    document.write(frase);
+                    saltarlinea();
+                }
+
+                        let numeroPensado = Math.round(Math.random()*10);
+                        let intentos = 3;
+                        let contador = 1;
+
+                            
+                            while( contador <= intentos){
+                                let numerolanzado = parseInt(prompt("Ingrese un numero 0 - 10" ));
+                                if (numeroPensado == numerolanzado){
+                                    alert("Usted acerto en el intento: " + contador + " el numero pensado era: " + numeroPensado);
+                                    break;
+                                }
+                                 else {
+                                        alert("usted eligio mal");
+
+                                      }
+                                      contador++;
+                            }
+                            saltarlinea();
+                            imprimir("El numero ganador era el: " + numeroPensado)
+
+
+        </script>
+    </body></center>

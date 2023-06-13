@@ -1,0 +1,76 @@
+<meta charset="UTF-8">
+<center>
+    <body>
+        
+
+<h1>CALCULADORA IMC INTERACTIVA</h1>
+<hr> <br> <br> <hr>
+<script>
+
+function saltarlinea(){
+    document.write("<hr>");
+    document.write("<br>");
+    document.write("<br>");
+    document.write("<hr>");
+}
+function imprimir(frase){
+    document.write(frase);
+        saltarlinea();
+}
+
+function calcularImc(peso,altura){
+    return (peso / (altura * altura));
+}
+
+
+nombre = prompt(" informe su nombre")
+pesoinformado = prompt(nombre + " Informe su peso: ");
+alturainformada = prompt(nombre +" informe su altura: ");
+imcCalcualdo = calcularImc(pesoinformado,alturainformada);
+
+imprimir( "El imc de " + nombre + " calculado es de: " + imcCalcualdo);
+
+if(imcCalcualdo < 18.5){
+    imprimir("peso bajo")
+}
+
+if(imcCalcualdo >=18.5){
+    if(imcCalcualdo <= 25){
+        imprimir("IMC dentro del intervalo normal")
+    }
+}
+
+if(imcCalcualdo > 25){
+    if(imcCalcualdo <=29.9){
+        imprimir("su imc esta en sobre peso ")
+    }
+}
+
+
+if(imcCalcualdo > 30){
+    if(imcCalcualdo <=34.9){
+        imprimir("su imc esta en obesidad grado 1 ")
+    }
+}
+
+
+if(imcCalcualdo > 35){
+    if(imcCalcualdo <=39.9){
+        imprimir("su imc esta en obecidad grado 2  ")
+    }
+}
+
+
+if(imcCalcualdo >= 40){
+    imprimir("IMC en obesidad preocupante")
+}
+
+
+
+
+
+</script>
+
+    </body>
+</center>
+

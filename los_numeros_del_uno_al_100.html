@@ -1,0 +1,28 @@
+<meta charset="UTF-8">
+<center><body>
+    <h1>LOS NUMEROS DEL 1 AL 100</h1>
+    <script>    
+
+        function saltarlinea(){
+            document.write("<br>");
+            document.write("<br>");
+            document.write("<br>");
+        }
+        function imprimir(frase){
+            document.write(frase);
+            saltarlinea();
+        }
+
+        let numerobase = 0;
+        saltarlinea();
+        
+        while (numerobase <= 100){
+            
+            imprimir( numerobase);
+            numerobase = numerobase + 2
+        }
+        imprimir("FIN");
+
+
+    </script>
+</body></center>
